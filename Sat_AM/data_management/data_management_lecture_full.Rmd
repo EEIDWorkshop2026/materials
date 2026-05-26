@@ -1,9 +1,8 @@
 ---
 title: "Managing data and building pipelines in R"
-author: "Kate E. Langwig, Alex T. Grimaudo, Macy J. Kailing - IBRC 2022"
+author: "Kate E. Langwig"
 output:
-  ioslides_presentation: 
-    incremental: true
+  ioslides_presentation: default
   beamer_presentation: default
 ---
 
@@ -13,10 +12,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Link to today's materials
 
-https://github.com/VTQuantMethodsEEB/ibrc_workshop
-
-- scroll down to README for links
-- ensure R and RStudio (Posit) are downloaded
+https://github.com/EEIDWorkshop2026/materials/tree/main/data_management
+- In R, go to file--> new project --> version control-->git-->copy and paste the directory name (materials)
+- make sure materials fills in as the name of the directory
+- **Store in the class folder that you can find!**
+- Each class --double click klangwig.Rproj and pull
+- Open the R script 2_data_management_tidyverse.R so you can run it while I talk
 
 
 ## Field, lab, or software program to R
@@ -47,7 +48,7 @@ Pipelines are ways of carefully recording and systematizing the steps you take t
 
 ### What will your data **look like** and how will you **analyze it**? {.smaller}
 
-- Determine what your data points/observations/sampling units are (individual bat, acoustic detector, insect trap)
+- Determine what your data points/observations/sampling units are (individual insect trap)
 - Use these to link across data types
 - Stay consistent by planning ahead 
     - spend a little time up front to save lots of time later
@@ -77,6 +78,7 @@ Proper file (electronic and hard copy) management will save you TONS of time, he
 - organizing as if you will continuously build the dataset and anticipate you will need to go back
 - "*if someone continued this project, is my data pipeline in a place I could hand it over seamlessly?*"
 
+--------KL COME HERE--------------
 ## An example with acoustic data | multiple sites; multiple detectors; thousands of calls
 
 This can quickly become overwhelming with an abundance of folders and files; each containing many dates, similar but different output files, lots of varying information
