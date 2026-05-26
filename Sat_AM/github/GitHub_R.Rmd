@@ -110,8 +110,8 @@ I swear I will never make a change to my repository without committing and pushi
 
 
 ## Enter your user name into this form
-- enter your github user name [here](https://docs.google.com/forms/d/e/1FAIpQLSfH3dHSr-UuiPo84EH_4smshl9fvJ-t7x2hA30Dx8dcm0Hy0w/viewform?usp=sf_link)
- 
+- enter your github user name [here](https://forms.gle/bEoWYsnbFefjcEgS7)
+ - clickable link for Kate: https://docs.google.com/forms/d/1hfFzC5CFDJAO-OVXBCEcVQk9IJ465nnEf9DA1PbVZWI/edit
  
 ## Tasks for today
 - Configure Git on your computer
@@ -136,7 +136,7 @@ use_git_config(user.name = "Jane Doe", "user.email = jane@vt.edu")
 ## 2. Create a personal access token
 - when we interact with Git, we need to tell it that we are a specific user that is allowed to make changes to the folder
 - We have to create a token that we store on our computers to allow us access to connect to GitHub
-- open this [link](https://github.com/EEIDWorkshop2026/materials/blob/main/github/git_token_help.R)
+- open this [link](https://github.com/EEIDWorkshop2026/materials/blob/main/Sat_AM/github/git_token_help.R)
 - copy and paste code and follow directions
 ```{r, eval=FALSE, echo=TRUE}
 #abbreviated here:
@@ -165,7 +165,7 @@ gitcreds_get()
 ## 4. Clone that repository to your computer
 - In RStudio, click File-->New Project-->Version Control-->Git
 - In Repository Name: Copy and paste the hyperlink from the browser of your repository
-  - It will have a name like this: https://github.com/VTQuantMethodsEEB/WomenInDataScience
+  - It will have a name like this: https://github.com/EEIDWorkshop2026/yourname
 - In Project Directory: It should have the same name as the repo on GitHub (should autofill). It should be the name after the last /
 - Create Project as subdirectory: Pick a smart place on your computer that you find without using a search function
 - Click OK and you should clone into a new window that says 'YourRepo - main'
