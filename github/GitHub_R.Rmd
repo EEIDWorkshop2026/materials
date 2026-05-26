@@ -153,7 +153,7 @@ gitcreds_get()
 
 
 ## 3. Set up a repository on GitHub
-- navigate to https://github.com/VTQuantMethodsEEB 
+- navigate to https://github.com/EEIDWorkshop2026 
 - click the green New button to create a repository
   - you can also do this on your own account, but if you make them here, I can help
   - If I haven't sent your Github user name, you won't be able to access this 
@@ -194,7 +194,7 @@ gitcreds_get()
 - press the 'Push' button
 
 ## 7. Confirm that Push worked
-- go to your Github repo online (e.g. https://github.com/VTQuantMethodsEEB/WomenInDataScience)
+- go to your Github repo online (e.g. <https://github.com/EEIDWorkshop2026/yourname>)
 - ensure your files have updated to GitHub
 
 ## 8. Adding collaborators
