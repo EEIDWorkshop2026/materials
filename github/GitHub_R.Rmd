@@ -84,9 +84,9 @@ I solemnly swear that every time I open my repository I will **(1) Pull, (2) mak
 
 I swear I will never make a change to my repository without committing and pushing.
 
-## Sending your files to our class repository
+## Sending your files to our workshop repository
 
--   We have an "organization" account for our class
+-   We have an "organization" account for our workshop
 -   Can make repos public or private
 -   Why should we want things open-source? Why not?
 

@@ -3203,25 +3203,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">4/20/2023</p>
+            <p style="margin-top: 6px; margin-left: -2px;">5/26/2026</p>
           </hgroup>
   </slide>
 
-<slide class=""><hgroup><h2>Welcome to Women in Data Science GitHub workshop</h2></hgroup><article  id="welcome-to-women-in-data-science-github-workshop">
+<slide class=""><hgroup><h2>Welcome to the EEID 2026 workshop</h2></hgroup><article  id="welcome-to-the-eeid-2026-workshop">
 
 <ul>
-<li>Click <a href='https://github.com/VTQuantMethodsEEB/WomenInDataScience' title=''>here</a> and scroll down to follow along with course materials</li>
+<li>Click <a href='https://github.com/EEIDWorkshop2026/materials' title=''>here</a> and scroll down to follow along with course materials</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Workshop Goals</h2></hgroup><article  id="workshop-goals">
+</article></slide><slide class=""><hgroup><h2>Pre-Break Goals</h2></hgroup><article  id="pre-break-goals">
 
 <ul>
 <li>Introduce Git &amp; GitHub</li>
 <li>learn to link GitHub to RStudio</li>
-<li>edit your first project and send it to GitHub</li>
+<li>edit your first script and send it to GitHub</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>What is Git?</h2></hgroup><article  id="what-is-git">
+</article></slide><slide class=""><hgroup><h2>The Replication Crisis</h2></hgroup><article  id="the-replication-crisis">
+
+<p>Very few scientific studies are ever actually replicated, and when we try to replicate the results of studies we often can’t.</p>
+
+<p>Why don’t we replicate more studies?</p>
+
+</article></slide><slide class=""><hgroup><h2>What does it mean for research to be &ldquo;Reproducible&rdquo;?</h2></hgroup><article  id="what-does-it-mean-for-research-to-be-reproducible">
+
+<p>Research is <strong>reproducible</strong> when others can reproduce the results of a scientific study given only the original data, code, and documentation</p>
+
+</article></slide><slide class=""><hgroup><h2>Who benefits from reproducible research?</h2></hgroup><article  id="who-benefits-from-reproducible-research">
+
+<ul>
+<li>Researchers
+
+<ul>
+<li>Remember how and why you did what you did</li>
+<li>Quickly simplify and modify analyses</li>
+<li>Makes you trustworthy</li>
+<li>Increases citation rates</li>
+</ul></li>
+<li>Research community
+
+<ul>
+<li>Lets people learn from your work</li>
+<li>Lets people find your mistakes</li>
+<li><em>Lets people actually reproduce your results</em></li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Working in Github</h2></hgroup><article  id="working-in-github">
 
 <ul>
 <li>Git is version control system, with the original purpose of allowing groups to work collaboratively on software projects</li>
@@ -3231,52 +3261,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
 <li>It also allows collaboration so I can look at your code and make changes - a bit like a more complicated version of Google Docs</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>What is GitHub?</h2></hgroup><article  id="what-is-github">
-
-<ul>
-<li>GitHub is place where you &lsquo;share&rsquo; your projects</li>
-<li>It is an online service (like google drive or Dropbox) for software</li>
-<li>Anyone can sign up for a free account</li>
-<li>GitHub is a for profit, but offers educational discounts</li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>Why use Git and GitHub?</h2></hgroup><article  id="why-use-git-and-github">
-
-<ul>
-<li>Git allows us to track changes to our code and projects in a systematic way</li>
-<li>We can restore our code at any point in time to fix errors we may have made</li>
-<li>It also allows for simpler sharing and merging of code across teams</li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>But I only code alone!</h2></hgroup><article  id="but-i-only-code-alone">
-
-<ul>
-<li><p>You need to carefully document your steps if the only person you are sharing code with is the future version of yourself</p></li>
-<li><p>In addition, most journals require publicly available data and code - open code is the norm, not the exception.</p></li>
-<li><p>Using Git has gotten easier. We used to have to use command line to communicate with Git, but now we can just use RStudio!</p></li>
-</ul>
-
 </article></slide><slide class=""><hgroup><h2>Terminology</h2></hgroup><article  id="terminology">
 
 <ul>
-<li><p>repository: A directory or storage space where your projects can live. Sometimes GitHub users shorten this to &ldquo;repo.&rdquo; (If you’re cool like that.) It is usually a local folder on your computer. You can keep code files, text files, image files, you name it, inside a repository.</p></li>
-<li><p>commit: This is the command that gives Git its power. When you commit, you are taking a &ldquo;snapshot&rdquo; of your repository at that point in time, giving you a checkpoint to which you can reevaluate or restore your project to any previous state.When you first start &ldquo;commiting&rdquo;, it is important to remember this is taking the picture, not SENDING the picture. (Sending is called &ldquo;pushing&rdquo;)</p></li>
+<li><strong>repository</strong>: like a project folder</li>
+<li>All data, code, and outputs relevant to a particular project live together in the same repository (&ldquo;repo&rdquo;)</li>
+<li>It is usually a local folder on your computer. You can keep code files, text files, image files, you name it, inside a repository.</li>
+<li>Track revision history within each repo</li>
+<li>Make different repositories for different projects</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Terminology</h2></hgroup><article  id="terminology-1">
+
+<ul>
+<li><strong>commit</strong>: This is the command that gives Git its power. When you commit, you are taking a &ldquo;snapshot&rdquo; of your repository at that point in time, giving you a checkpoint to which you can reevaluate or restore your project to any previous state.When you first start &ldquo;commiting&rdquo;, it is important to remember this is taking the picture, not SENDING the picture. (Sending is called &ldquo;pushing&rdquo;)</li>
+<li>we use commits to track the sequential changes we are making on our local version and then PUSH them back to remote repo</li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>Terminology cont.</h2></hgroup><article  id="terminology-cont.">
 
 <ul>
-<li><p>branch: How do multiple people work on a project at the same time without Git getting them confused? Usually, they &ldquo;branch off&rdquo; of the main project with their own versions full of changes they themselves have made. After they’re done, it’s time to &ldquo;merge&rdquo; that branch back with the &ldquo;master,&rdquo; the main directory of the project. Because we’ll be working within our own repos, we don’t need to worry too much about branching but is good to know for future.</p></li>
-<li><p>push: This is how you upload your file to GitHub. Remember, you need to both commit and push for your file to be sent to GitHub.</p></li>
+<li><p><strong>push</strong>: This is how you upload your file to GitHub. Remember, you need to both commit and push for your file to be sent to GitHub.</p></li>
+<li><p><strong>pull</strong>: This is how you bring edits from GitHub to your computer. If I make changes to your code, pulling will integrate them. You will need to do this every time you open your project.</p></li>
+<li><p><strong>branch</strong>: How do multiple people work on a project at the same time without Git getting them confused? Usually, they &ldquo;branch off&rdquo; of the main project with their own versions full of changes they themselves have made. After they’re done, it’s time to &ldquo;merge&rdquo; that branch back with the &ldquo;master,&rdquo; the main directory of the project. Don’t worry too much about this now.</p></li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Command line vs Desktop Client</h2></hgroup><article  id="command-line-vs-desktop-client">
+</article></slide><slide class=""><hgroup><h2>GitHub workflow</h2></hgroup><article  id="github-workflow">
 
 <ul>
-<li>there are numerous programs (like GitHub Desktop) that can make working with Git and GitHub easier</li>
-<li>We can work with Git using the command line (e.g. in the &lsquo;terminal&rsquo;) which is how it used to HAVE to be done</li>
-<li>IMO, using tools like RStudio and the Desktop Client make Git more accessible, particularly for beginners</li>
-<li>there is no nerd olympics! It’s okay not to use the command line for everything.</li>
+<li><strong>Pull</strong> latest updates from cloud to computer</li>
+<li>Edit scripts, graphs, other files</li>
+<li>Review changes and <strong>commit</strong> them</li>
+<li><strong>Push</strong> commits to the (cloud) repository</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Class pledge</h2></hgroup><article  id="class-pledge">
+
+<p>I solemnly swear that every time I open my repository I will <strong>(1) Pull, (2) make changes I want to make, (3) Commit, (4) Push</strong>.</p>
+
+<p>I swear I will never make a change to my repository without committing and pushing.</p>
+
+</article></slide><slide class=""><hgroup><h2>Sending your files to our workshop repository</h2></hgroup><article  id="sending-your-files-to-our-workshop-repository">
+
+<ul>
+<li>We have an &ldquo;organization&rdquo; account for our workshop</li>
+<li>Can make repos public or private</li>
+<li>Why should we want things open-source? Why not?</li>
 </ul>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Pre-course homework</h2></hgroup><article  id="pre-course-homework">
@@ -3315,9 +3345,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
 <li>Configure Git on your computer</li>
 <li>Create a personal access token</li>
 <li>Set up a repository on GitHub</li>
-<li>clone that repository to your computer</li>
-<li>edit something in your repository</li>
-<li>commit your edits using Git</li>
+<li>Clone that repository to your computer</li>
+<li>Edit something in your repository</li>
+<li>Commit your edits using Git</li>
 <li>Push your edits to GitHub</li>
 </ul>
 
@@ -3342,7 +3372,7 @@ use_git_config(user.name = &quot;Jane Doe&quot;, &quot;user.email = jane@vt.edu&
 <ul>
 <li>when we interact with Git, we need to tell it that we are a specific user that is allowed to make changes to the folder</li>
 <li>We have to create a token that we store on our computers to allow us access to connect to GitHub</li>
-<li>open this <a href='https://github.com/VTQuantMethodsEEB/WomenInDataScience/blob/main/git_token_help.R' title=''>link</a></li>
+<li>open this <a href='https://github.com/EEIDWorkshop2026/materials/blob/main/github/git_token_help.R' title=''>link</a></li>
 <li>copy and paste code and follow directions</li>
 </ul>
 
@@ -3360,7 +3390,7 @@ gitcreds_get()</pre>
 </article></slide><slide class=""><hgroup><h2>3. Set up a repository on GitHub</h2></hgroup><article  id="set-up-a-repository-on-github">
 
 <ul>
-<li>navigate to <a href='https://github.com/VTQuantMethodsEEB' title=''>https://github.com/VTQuantMethodsEEB</a></li>
+<li>navigate to <a href='https://github.com/EEIDWorkshop2026' title=''>https://github.com/EEIDWorkshop2026</a></li>
 <li>click the green New button to create a repository
 
 <ul>
@@ -3422,7 +3452,7 @@ gitcreds_get()</pre>
 </article></slide><slide class=""><hgroup><h2>7. Confirm that Push worked</h2></hgroup><article  id="confirm-that-push-worked">
 
 <ul>
-<li>go to your Github repo online (e.g. <a href='https://github.com/VTQuantMethodsEEB/WomenInDataScience' title=''>https://github.com/VTQuantMethodsEEB/WomenInDataScience</a>)</li>
+<li>go to your Github repo online (e.g. <a href='https://github.com/EEIDWorkshop2026/yourname' title=''>https://github.com/EEIDWorkshop2026/yourname</a>)</li>
 <li>ensure your files have updated to GitHub</li>
 </ul>
 
