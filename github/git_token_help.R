@@ -9,6 +9,8 @@
 usethis::create_github_token()
 #Look over the scopes; I highly recommend selecting 
 #“repo”, “user”, and “workflow”. 
+#check the expiration date!
+#make sure you have a 'Classic Token' - Not fine grained!
 #Click “Generate token”.
 
 #Copy the generated PAT to your clipboard! paste it someplace (notes, a word doc)

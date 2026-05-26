@@ -1,7 +1,7 @@
 ---
 title: "GitHub"
 author: "Kate Langwig"
-date: "4/20/2023"
+date: "5/26/2026"
 output:
   ioslides_presentation: default
   beamer_presentation: default
@@ -11,74 +11,103 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-## Welcome to Women in Data Science GitHub workshop
-- Click [here](https://github.com/VTQuantMethodsEEB/WomenInDataScience) and scroll down to follow along with course materials
+## Welcome to the EEID 2026 workshop
+- Click [here](https://github.com/EEIDWorkshop2026/materials) and scroll down to follow along with course materials
 
-## Workshop Goals
+## Pre-Break Goals
 - Introduce Git & GitHub
 - learn to link GitHub to RStudio
-- edit your first project and send it to GitHub
+- edit your first script and send it to GitHub
 
-## What is Git?
-- Git is version control system, with the original purpose of allowing groups to work collaboratively on software projects
-- Git manages the evolution of a set of files - called a repository
-- A repository is essentially a folder where you store your stuff
-- Version control works a bit like "Track Changes" in word, Git will track the changes we make to our code so we can return to previous versions
-- It also allows collaboration so I can look at your code and make changes - a bit like a more complicated version of Google Docs
-
-## What is GitHub?
-- GitHub is place where you 'share' your projects
-- It is an online service (like google drive or Dropbox) for software
-- Anyone can sign up for a free account
-- GitHub is a for profit, but offers educational discounts
+## The Replication Crisis
+Very few scientific studies are ever actually replicated, and when we try to replicate the results of studies we often can’t.
 
 
-## Why use Git and GitHub?
-- Git allows us to track changes to our code and projects in a systematic way
-- We can restore our code at any point in time to fix errors we may have made
-- It also allows for simpler sharing and merging of code across teams
+Why don’t we replicate more studies?
+
+## What does it mean for research to be “Reproducible”?
+
+Research is **reproducible** when others can reproduce the results of a scientific study given only the original data, code, and documentation
+
+## Who benefits from reproducible research?
+- Researchers
+  - Remember how and why you did what you did
+  - Quickly simplify and modify analyses
+  - Makes you trustworthy
+  - Increases citation rates
+  
+- Research community
+  - Lets people learn from your work
+  - Lets people find your mistakes
+  - *Lets people actually reproduce your results*
 
 
-## But I only code alone! 
-- You need to carefully document your steps if the only person you are sharing code with is the future version of yourself
+## Working in Github
 
-- In addition, most journals require publicly available data and code  - open code is the norm, not the exception.
+-   Git is version control system, with the original purpose of allowing groups to work collaboratively on software projects
+-   Git manages the evolution of a set of files - called a repository
+-   A repository is essentially a folder where you store your stuff
+-   Version control works a bit like "Track Changes" in word, Git will track the changes we make to our code so we can return to previous versions
+-   It also allows collaboration so I can look at your code and make changes - a bit like a more complicated version of Google Docs
 
-- Using Git has gotten easier. We used to have to use command line to communicate with Git, but now we can just use RStudio! 
 
 ## Terminology
 
-- repository: A directory or storage space where your projects can live. Sometimes GitHub users shorten this to “repo.” (If you're cool like that.) It is usually a local folder on your computer. You can keep code files, text files, image files, you name it, inside a repository.
+-   **repository**: like a project folder
+  - All data, code, and outputs relevant to a particular project live together in the same repository (“repo”)
+  - It is usually a local folder on your computer. You can keep code files, text files, image files, you name it, inside a repository.
+  - Track revision history within each repo
+  - Make different repositories for different projects
 
-- commit: This is the command that gives Git its power. When you commit, you are taking a “snapshot” of your repository at that point in time, giving you a checkpoint to which you can reevaluate or restore your project to any previous state.When you first start "commiting", it is important to remember this is taking the picture, not SENDING the picture. (Sending is called "pushing")
+
+## Terminology
+-   **commit**: This is the command that gives Git its power. When you commit, you are taking a “snapshot” of your repository at that point in time, giving you a checkpoint to which you can reevaluate or restore your project to any previous state.When you first start "commiting", it is important to remember this is taking the picture, not SENDING the picture. (Sending is called "pushing")
+- we use commits to track the sequential changes we are making on our local version and then PUSH them back to remote repo
 
 ## Terminology cont.
+-   **push**: This is how you upload your file to GitHub. Remember, you need to both commit and push for your file to be sent to GitHub.
 
-- branch: How do multiple people work on a project at the same time without Git getting them confused? Usually, they “branch off” of the main project with their own versions full of changes they themselves have made. After they’re done, it’s time to “merge” that branch back with the “master,” the main directory of the project. Because we'll be working within our own repos, we don't need to worry too much about branching but is good to know for future.
+- **pull**: This is how you bring edits from GitHub to your computer. If I make changes to your code, pulling will integrate them. You will need to do this every time you open your project. 
 
-- push: This is how you upload your file to GitHub. Remember, you need to both commit and push for your file to be sent to GitHub. 
+-   **branch**: How do multiple people work on a project at the same time without Git getting them confused? Usually, they “branch off” of the main project with their own versions full of changes they themselves have made. After they’re done, it’s time to “merge” that branch back with the “master,” the main directory of the project. Don't worry too much about this now.
 
-## Command line vs Desktop Client
-- there are numerous programs (like GitHub Desktop) that can make working with Git and GitHub easier
-- We can work with Git using the command line (e.g. in the 'terminal') which is how it used to HAVE to be done
-- IMO, using tools like RStudio and the Desktop Client make Git more accessible, particularly for beginners
-- there is no nerd olympics! It's okay not to use the command line for everything. 
+## GitHub workflow
+- **Pull** latest updates from cloud to computer
+- Edit scripts, graphs, other files
+- Review changes and **commit** them 
+- **Push** commits to the (cloud) repository
+
+
+## Class pledge
+
+I solemnly swear that every time I open my repository I will **(1) Pull, (2) make changes I want to make, (3) Commit, (4) Push**. 
+
+I swear I will never make a change to my repository without committing and pushing.
+
+## Sending your files to our class repository
+
+-   We have an "organization" account for our class
+-   Can make repos public or private
+-   Why should we want things open-source? Why not?
 
 # Pre-course homework
 
 ## Register for a GitHub username
-- https://github.com/
-- click on either of the big green sign up buttons
+
+-   <https://github.com/>
+-   click on either of the big green sign up buttons
 
 ## Installing Git
- - Hopefully you have installed Git!
- - If not, please do so here, following the instructions:
- http://happygitwithr.com/install-git.html#install-git
- - Try to install git in the most scientific way possible - if one way doesn't work, try the next, and google your mistakes! 
- 
+
+-   Hopefully you have installed Git!
+-   If not, please do so here, following the instructions: <http://happygitwithr.com/install-git.html#install-git>
+-   Try to install git in the most scientific way possible - if one way doesn't work, try the next, and google your mistakes!
+
 ## Install a Git client
-- GitHub desktop is great for beginners
-- https://desktop.github.com
+
+-   GitHub desktop is great for beginners
+-   <https://desktop.github.com>
+
 
 ## Enter your user name into this form
 - enter your github user name [here](https://docs.google.com/forms/d/e/1FAIpQLSfH3dHSr-UuiPo84EH_4smshl9fvJ-t7x2hA30Dx8dcm0Hy0w/viewform?usp=sf_link)
@@ -88,9 +117,9 @@ knitr::opts_chunk$set(echo = FALSE)
 - Configure Git on your computer
 - Create a personal access token
 - Set up a repository on GitHub
-- clone that repository to your computer
-- edit something in your repository
-- commit your edits using Git
+- Clone that repository to your computer
+- Edit something in your repository
+- Commit your edits using Git
 - Push your edits to GitHub
 
 ## 1. Configure Git on your computer
@@ -107,7 +136,7 @@ use_git_config(user.name = "Jane Doe", "user.email = jane@vt.edu")
 ## 2. Create a personal access token
 - when we interact with Git, we need to tell it that we are a specific user that is allowed to make changes to the folder
 - We have to create a token that we store on our computers to allow us access to connect to GitHub
-- open this [link](https://github.com/VTQuantMethodsEEB/WomenInDataScience/blob/main/git_token_help.R)
+- open this [link](https://github.com/EEIDWorkshop2026/materials/blob/main/github/git_token_help.R)
 - copy and paste code and follow directions
 ```{r, eval=FALSE, echo=TRUE}
 #abbreviated here:
