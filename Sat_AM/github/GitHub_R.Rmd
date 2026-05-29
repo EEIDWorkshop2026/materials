@@ -90,6 +90,16 @@ I swear I will never make a change to my repository without committing and pushi
 -   Can make repos public or private
 -   Why should we want things open-source? Why not?
 
+## FAIR Data Practices
+Data obtained with support from public funds (such as NSF or NIH) are usually required to be made available to other scientists and the public.
+
+In particular we want our data to be FAIR:
+
+- **F**indable
+- **A**ccessible
+- **I**nteroperable
+- **R**eproducible
+
 # Pre-course homework
 
 ## Register for a GitHub username
