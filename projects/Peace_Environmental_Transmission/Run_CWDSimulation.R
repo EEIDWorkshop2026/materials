@@ -7,7 +7,7 @@ if (!require("av")) install.packages("av")
 library(av) # Required to record and compile the .mp4 video output
 
 # --- 1. LOAD HABITAT MAP AND MOVEMENT MATRIX ---
-scenario_file <- "cwd_data_random.rds" 
+scenario_file <- "cwd_data_patchy.rds" 
 if (!file.exists(scenario_file)) {
   stop(paste("Could not find", scenario_file, "- Check your working directory!"))
 }
