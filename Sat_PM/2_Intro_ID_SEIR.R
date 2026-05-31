@@ -10,26 +10,26 @@ library(ggplot2)
 library(tidyverse)
 
 # choose parameter values
-parameters <- # FILL IN
+parameters <- c(beta = 2/3, kappa = 1/30, gamma = 1/3, sigma = 1/10)
 
 # initial state variables
-inits <- # FILL IN
+inits <- c(S = 499, E = 0, I = 1, R = 0)
 
 # time to run simulation
 time_vector <- seq(0, 300, 1)
 
 # pre-allocate array for variables
 S = rep(NA,length(time_vector))
-E = # FILL IN
-I = # FILL IN
-R = # FILL IN
+E = rep(NA,length(time_vector))
+I = rep(NA,length(time_vector))
+R = rep(NA,length(time_vector))
 
 # place initial conditions in first position of array
 nTotal = sum(inits)
 S[1] = inits["S"]
-E[1] = # FILL IN
-I[1] = # FILL IN
-R[1] = # FILL IN
+E[1] = inits["E"]
+I[1] = inits["I"]
+R[1] = inits["R"]
 
 # shorter access for parameters
 beta = parameters["beta"]
@@ -40,10 +40,10 @@ sigma = parameters["sigma"]
 # loop over time vector
 for (t in 1:(length(time_vector)-1)){
   # Epidemic events
-  newly_infected = # FILL IN
-  newly_infectious = # FILL IN
-  recovered_today= # FILL IN
-  losing_immunity_today = # FILL IN
+  newly_infected = I[t] * S[t] * beta / nTotal
+  newly_infectious = E[t]*sigma
+  recovered_today= I[t] * gamma
+  losing_immunity_today = R[t] * kappa
   
   
   # Updating epidemic equations
@@ -75,6 +75,6 @@ ggplot(data = df.long, aes(x = time_vector, y = population, color = compartment)
 
 
 # calculating R0
-R0 <- # FILL IN
+R0 <- beta/gamma
 print(R0)
 

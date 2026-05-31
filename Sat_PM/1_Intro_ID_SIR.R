@@ -10,58 +10,53 @@ library(ggplot2)
 library(tidyverse)
 
 # choose parameter values
-parameters <- # FILL IN
+parameters <- c(beta = 2/3, kappa = 1/30, gamma = 1/3)
 
 # initial state variables
-inits <- # FILL IN
+inits <- c(S = 499, I = 1, R = 0)
 
 # time to run simulation
 time_vector <- seq(0, 300, 1)
 
 # pre-allocate array for variables
 S = rep(NA,length(time_vector))
-E = # FILL IN
-I = # FILL IN
-R = # FILL IN
+I = rep(NA,length(time_vector))
+R = rep(NA,length(time_vector))
 
 # place initial conditions in first position of array
 nTotal = sum(inits)
 S[1] = inits["S"]
-E[1] = # FILL IN
-I[1] = # FILL IN
-R[1] = # FILL IN
+I[1] = inits["I"]
+R[1] = inits["R"]
 
 # shorter access for parameters
 beta = parameters["beta"]
 gamma = parameters["gamma"]
 kappa = parameters["kappa"]
-sigma = parameters["sigma"]
 
 # loop over time vector
 for (t in 1:(length(time_vector)-1)){
   # Epidemic events
-  newly_infected = # FILL IN
-  newly_infectious = # FILL IN
-  recovered_today= # FILL IN
-  losing_immunity_today = # FILL IN
-  
+  newly_infected = I[t] * S[t] * beta / nTotal
+  recovered_today= I[t] * gamma
+  losing_immunity_today = R[t] * kappa
   
   # Updating epidemic equations
-  S[t+1] = S[t] - newly_infected                                      + losing_immunity_today
-  E[t+1] = E[t] + newly_infected - newly_infectious
-  I[t+1] = I[t]                  + newly_infectious - recovered_today
-  R[t+1] = R[t]                                     + recovered_today - losing_immunity_today
-  
+  S[t+1] = S[t] - newly_infected                   + losing_immunity_today
+  I[t+1] = I[t] + newly_infected - recovered_today
+  R[t+1] = R[t]                  + recovered_today - losing_immunity_today
+
 }
 
-# place in data frame for plotting
+# place output in data frame for plotting
 df <- as.data.frame(time_vector)
-df <- cbind(df,S,E,I,R)
+df <- cbind(df,S,I,R)
 
 # pivot to long data frame
-df.long = pivot_longer(df, cols = c("S", "E", "I", "R"), # this says select the columns you want to make longer
-                       names_to = "compartment", # this says what you want to call the new column that has the names of the old columns (S, I, R)
-                       values_to = "population") # this is where you put the values of the old columns (S, I, R)
+df.long = pivot_longer(df, cols = c("S", "I", "R"), # select the columns you want to make longer
+                       names_to = "compartment", # new column name that contains the names of the old columns (S, I, R)
+                       values_to = "population") # values from the old columns (S, I, R)
+
 
 # plot
 ggplot(data = df.long, aes(x = time_vector, y = population, color = compartment) ) + # Data and aesthetics
@@ -71,10 +66,10 @@ ggplot(data = df.long, aes(x = time_vector, y = population, color = compartment)
        title = "SIR model",                             # plot title
        color = "") +                                    # legend title
   theme_minimal()+
-  scale_color_discrete(breaks=c('S', 'E', 'I', 'R'))         # reorder lines
+  scale_color_discrete(breaks=c('S', 'I', 'R'))         # reorder lines
 
 
 # calculating R0
-R0 <- # FILL IN
+R0 <- beta/gamma
 print(R0)
 

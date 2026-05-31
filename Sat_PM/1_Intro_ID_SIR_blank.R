@@ -19,7 +19,7 @@ inits <- # FILL IN
 time_vector <- # FILL IN
 
 # pre-allocate array for variables
-S = rep(NA,length(time_vector),1)
+S = rep(NA,length(time_vector))
 I = # FILL IN
 R = # FILL IN
 

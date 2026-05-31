@@ -1,5 +1,5 @@
 ##### Initiate populations  ####
-InitiatePop = function(IDs, initialInf_vec,totalPop_vec,beta_vec,gamma_vec){
+InitiatePop = function(IDs, initialInf_vec,totalPop_vec,beta_vec,gamma_vec,kappa_vec){
   list(
     ID = IDs,
     I = initialInf_vec,
