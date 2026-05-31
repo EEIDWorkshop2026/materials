@@ -130,13 +130,9 @@ cat("Processing mathematical engine and rendering video layers...\n")
 av_capture_graphics({
   for (t in 1:timesteps) {
     
-    # Policy 1: Global Emergency Density Reduction
-    global_trigger <- 100
-    
-    if (sum(I) >= global_trigger) {
-      S <- S * 0.85  # 15% incidental loss of healthy deer during culling
-      I <- I * 0.50  # 50% targeted removal of infected deer
-    }
+    # --------------------------------------------------------------------
+    # [STUDENT EXERCISE : INSERT MANAGEMENT/MITIGATION POLICIES HERE
+    # --------------------------------------------------------------------
     
     # Step A: Calculate Biological Transitions (SIWR Difference Equations)
     new_inf <- (beta_d * S * I) + (beta_p * S * P)
